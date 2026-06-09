@@ -47,7 +47,6 @@ Every time you start a new AI coding session, the agent reads dozens of files ju
 | File | Purpose |
 |------|---------|
 | `generate_intelligence_prompt.md` | Paste into your IDE AI to generate `project_intelligence.md` for any project |
-| `project_intelligence.md` | Example output — generated for a real agentic AI project |
 | `CONTRIBUTING.md` | How to improve the standard |
 
 ---
