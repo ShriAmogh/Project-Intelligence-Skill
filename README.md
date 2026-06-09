@@ -1,4 +1,4 @@
-# project-intelligence
+## Project Intelligence
 
 > `project_intelligence.md` — the gold standard for AI-assisted development.
 
@@ -51,14 +51,25 @@ Every time you start a new AI coding session, the agent reads dozens of files ju
 
 ---
 
-## How to use
+## How to use inside Skill folder for IDE Agent
 
 **Step 1 — Generate**
 
-Copy `generate_intelligence_prompt.md` into the root of your project. Open your IDE AI (Cursor, Copilot, Windsurf, or any agent) and say:
+Copy `generate_intelligence_prompt.md` into the skill folder of your project. Open your IDE (Cursor, Copilot, Windsurf, or any agent) and add the following:
 
 ```
-Follow the instructions in generate_intelligence_prompt.md and produce project_intelligence.md for this codebase.
+## project_intelligence.md — required protocol
+
+- On first run in any project: check if `project_intelligence.md` exists at the repo root.
+  If it does not exist, follow `generate_intelligence_prompt.md` and generate it before doing anything else.
+- On every new context window or session start: read `project_intelligence.md` fully before
+  touching any source file.
+- After every feature addition, function change, or architectural decision: append an entry
+  to the Feature Log (§12) in `project_intelligence.md` and update any in-place sections
+  per the META table at the top of the file.
+- Never ask the user to update `project_intelligence.md` — do it autonomously as part of
+  completing any coding task.
+
 ```
 
 The agent will scan your codebase across 11 steps and write a fully populated file.
